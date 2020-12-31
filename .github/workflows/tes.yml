@@ -1,0 +1,16 @@
+name: CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:i
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to production
+      uses: appleboy/ssh-action@master
+      with:
+        username: root
+        host: 167.99.72.59
+        script: 'pwd && apt update'
