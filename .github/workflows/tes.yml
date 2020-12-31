@@ -13,4 +13,5 @@ jobs:
       with:
         username: root
         host: 167.99.72.59
+        paaswword : ${{ secrets.SSH_PASSWORD }}
         script: 'pwd && apt update'
