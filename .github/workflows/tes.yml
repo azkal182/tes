@@ -15,3 +15,10 @@ jobs:
         host: 167.99.72.59
         paaswword : Azkal182AA
         script: 'pwd && apt update'
+    - name: ls -a via ssh
+      uses: garygrossgarten/github-action-ssh@release
+     with:
+        command: ls -a
+        host: ${{ secrets.HOST }}
+        username: root
+        password: Azkal182AA
