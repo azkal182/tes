@@ -17,6 +17,7 @@ jobs:
       run: |
         cp .env.example .env
         php artisan key:generate
+        php artisan migrate
     - name: copy to server
       run: |
         sudo \cp -R . /home/server.rezaputra.site/server
