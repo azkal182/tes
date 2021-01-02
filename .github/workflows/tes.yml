@@ -6,12 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: ls -a via ssh
-      uses: garygrossgarten/github-action-ssh@release
-      with:
-        command: ls -a
-        host: 167.99.72.5
-        username: root
-        password: Azkal182AA
+      run: pwd
